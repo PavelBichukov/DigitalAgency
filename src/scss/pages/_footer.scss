@@ -1,0 +1,143 @@
+.main-footer {
+    background-color: $grey-bg-color;
+    padding: 2rem 0rem;
+
+    &__container {
+        @media (max-width:992px) {
+            max-width: 800px;
+        }
+
+        @media (max-width:1280px) {
+            max-width: 1180px;
+        }
+
+        @media (min-width:1620px) {
+            max-width: 1550px;
+        }
+
+        @media (min-width:1920px) {
+            max-width: 1890px;
+        }
+    }
+
+    &__form-area {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width:768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 8%;
+        }
+    }
+
+    &__form {
+        background-color: $main-yellow;
+        border-radius: 1rem;
+        padding: 55px 40px;
+        margin-bottom: 2rem;
+        position: relative;
+
+        @media (min-width:1100px) {
+            width: 50%;
+
+            &::before {
+                position: absolute;
+                content: url(/src/assets/images/footer/desktop-decor.svg);
+                left: -25px;
+                top: -25px;
+            }
+        }
+    }
+
+    &__form-input-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+        border-bottom: 1px solid white;
+    }
+
+    &__form-tittle {
+        color: black;
+    }
+
+    &__form-mail {
+        color: black;
+
+        &::placeholder {
+            color: rgb(111, 114, 121);
+        }
+    }
+
+    &__form-button {
+        color: black;
+        padding: 5px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            outline: 1px solid;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 23px -5px rgba(34, 60, 80, 0.38) inset;
+        }
+    }
+
+    &__office-address {
+        @include flex (column, flex-start, center);
+        margin-bottom: 2rem;
+        gap: 15px;
+
+        @media (min-width:768px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__contact-info {
+        @include flex (column, flex-start, center);
+        margin-bottom: 2rem;
+        gap: 15px;
+
+        @media (min-width:768px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__about-company-info {
+        @include flex (column, flex-start, center);
+
+        @media (min-width:768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__all-rights {
+        @media (min-width:1100px) {
+            order: 1;
+        }
+    }
+
+    &__terms-conditions {
+        max-width: 30%;
+        text-align: center;
+        line-height: 40px;
+
+        @media (min-width:1100px) {
+            order: 2;
+        }
+    }
+
+    &__social-media {
+        padding: 20px 0px;
+
+        @media (min-width:1100px) {
+            order: 3;
+        }
+    }
+
+    &__social-media-link {
+        padding: 0px 10px;
+    }
+}

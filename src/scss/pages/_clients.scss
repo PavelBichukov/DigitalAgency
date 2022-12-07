@@ -1,0 +1,106 @@
+.clients {
+    background-color: $blue-bg-color;
+    padding-bottom: 100px;
+
+
+
+    &__header {
+        @media (min-width:1200px) {
+            display: none;
+        }
+    }
+
+    &__desktop-tittle {
+        display: none;
+
+        @media (min-width:1200px) {
+            display: block;
+            font-size: 3rem;
+            padding: 3rem 0;
+        }
+    }
+
+    &__card {
+        background-color: $grey-bg-color;
+        padding: 150px 30px 30px;
+        border-radius: 3rem;
+        display: none;
+
+        &--active {
+            display: block;
+        }
+
+        @media (min-width:992px) {
+            display: block;
+            padding: 8rem 3rem 3rem;
+            position: relative;
+
+            &:first-child {
+                &::before {
+                    position: absolute;
+                    content: url(/src/assets/images/clients/decktop-arrow.svg);
+                    left: -5.5%;
+                    top: 45%;
+                }
+            }
+        }
+    }
+
+    &__card-text {
+        padding-bottom: 2rem;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url(/src/assets/images/clients/feedback-decor-mobile.svg);
+            left: 40%;
+            top: -20%;
+
+            @media (min-width:1200px) {
+                content: url(/src/assets/images/clients/feedback-decor.svg);
+                left: 0;
+                top: -30%;
+            }
+        }
+    }
+
+    &__about-client-area {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+
+        @media (min-width:1200px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__profile-box {
+        @include flex (column, flex-start, flex-start);
+        gap: 1rem;
+
+        @media (min-width:1200px) {
+            @include flex (row, space-between, center);
+            flex-grow: 1;
+        }
+    }
+
+    &__job {
+        color: $main-yellow;
+        padding-top: 1.5rem;
+        line-height: 0px;
+
+        @media (min-width:1200px) {
+            padding-top: 1rem;
+        }
+
+    }
+
+    &__rating-stars {
+        padding: 1.5rem 0rem;
+
+        @media (min-width:1200px) {
+            padding: 0;
+        }
+    }
+}

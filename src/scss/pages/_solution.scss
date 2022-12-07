@@ -1,0 +1,69 @@
+.solution {
+    background: linear-gradient(0deg, $main-yellow 25%, $blue-bg-color 5%);
+
+    @media (min-width:780px) {
+        background: linear-gradient(90deg, $main-yellow 40%, $grey-bg-color 5%);
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width:780px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__text-block {
+        @media (min-width:992px) {
+            width: 50%;
+        }
+    }
+
+    &__text-block-tittle {
+        padding: 2rem 0rem;
+
+        @media (min-width:1200px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__list-tittle {
+        font-size: 1.25rem;
+        padding: 1rem 0rem 0rem 3rem;
+        position: relative;
+
+        &::before {
+            content: url(/src/assets/icons/mobile-li-decor.svg);
+            position: absolute;
+            left: 0;
+
+            @media (min-width:780px) {
+                content: url(/src/assets/icons/desktop-li-decor.svg);
+            }
+        }
+
+        @media (min-width:780px) {
+            font-size: 1.5rem;
+            padding-top: 0rem;
+        }
+    }
+
+    &__list-text {
+        padding: 1rem 0rem 1rem 3rem;
+    }
+
+    &__image {
+        align-self: stretch;
+        margin: 5rem 0rem 5rem 0rem;
+
+        @media (min-width:780px) {
+            width: 50%;
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.section-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0rem 1rem;
+
+
+    &__tittle {
+        align-self: center;
+    }
+
+    &__content-button {
+        background: none;
+        color: $main-yellow;
+        padding-right: 0px;
+
+        @media (min-width:1100px) {
+            color: white;
+            border: 1px solid white;
+            padding-right: 1.5rem;
+
+            &::after {
+                content: "↗";
+                padding-left: 5px;
+            }
+        }
+    }
+}

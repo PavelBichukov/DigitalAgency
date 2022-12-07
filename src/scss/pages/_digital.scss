@@ -1,0 +1,200 @@
+.digital {
+    background-color: $blue-bg-color;
+
+    @media (min-width:992px) {
+        padding-top: 80px;
+    }
+
+    &__container {
+        @media (max-width:992px) {
+            max-width: 800px;
+        }
+
+        @media (max-width:1280px) {
+            max-width: 1180px;
+        }
+
+        @media (min-width:1620px) {
+            max-width: 1550px;
+        }
+
+        @media (min-width:1920px) {
+            max-width: 1890px;
+        }
+    }
+
+    &__main-flex {
+        padding-bottom: 2rem;
+        @include flex (column);
+    }
+
+
+    &__without-tittle-flex {
+        @media (min-width:770px) {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__tittle-top {
+        position: relative;
+        padding-left: 85px;
+
+        &::before {
+            content:
+                url(/src/assets/images/world-class.svg);
+            position: absolute;
+            left: -20px;
+            top: 0;
+
+            @media (min-width:1200px) {
+                transform: scale(2) translateX(-30%);
+            }
+        }
+
+        &::after {
+            content: url(/src/assets/images/losso.svg);
+            position: absolute;
+            top: -10px;
+            left: -35px;
+            transform: scale(0.9);
+
+            @media (min-width:1360px) {
+                content: url(/src/assets/images/big-losso.svg);
+                left: 255px;
+            }
+        }
+
+        @media (min-width:770px) {
+            align-self: center;
+        }
+    }
+
+    &__tittle-bottom {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url(/src/assets/icons/tittle-star.svg);
+            position: absolute;
+            bottom: 140px;
+            right: -50px;
+
+            @media (min-width:770px) {
+                display: none;
+            }
+        }
+    }
+
+    &__tittle-info {
+        @include flex (column, flex-start, flex-start);
+        gap: 1rem;
+
+        @media (min-width:770px) {
+            width: 42%;
+            order: 2;
+        }
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 2rem;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 200px;
+            right: 0;
+            top: 0;
+            background: url(/src/assets/images/light-circle.png) no-repeat;
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+
+        @media (min-width:992px) {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+
+        @media (min-width:1360px) {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    &__content-button {
+        margin-bottom: 2rem;
+    }
+
+    &__big-photo-box {
+        position: relative;
+        align-self: stretch;
+
+        @media (min-width:770px) {
+            align-self: flex-start;
+            order: 3;
+            width: 33%;
+            margin-top: 3%;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        left: 50%;
+        bottom: -20%;
+
+    }
+
+    &__big-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__small-photo-box {
+        align-self: stretch;
+        max-width: 50%;
+        margin: 3rem 0rem;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            background: url(/src/assets/images/decoration-circle.svg) 0 0 / 100% no-repeat;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            transform: translate(110%, 110%);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            background: url(/src/assets/images/backround-dots.svg) 0 0 / 100% no-repeat;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            transform: translate(-50%, 30%);
+
+            @media (min-width:770px) {
+                display: none;
+            }
+        }
+
+        @media (min-width:770px) {
+            margin-top: 245px;
+            order: 1;
+            width: 20%;
+            align-self: flex-end;
+        }
+    }
+
+    &__small-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+}

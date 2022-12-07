@@ -1,0 +1,29 @@
+.content-button {
+    color: rgba(10, 20, 47, 1);
+    background-color: $main-yellow;
+    padding: 1rem 1.5rem;
+    border-radius: 1.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05)
+    }
+
+    &:active {
+        transform: scale(0.9);
+        box-shadow: 1px 0px 72px 19px rgba(34, 60, 80, 0.767) inset;
+    }
+
+    &--transparent {
+        color: white;
+        border: 1px solid white;
+        background-color: none;
+    }
+}
+
+.content-button--transparent {
+    color: white;
+    border: 1px solid white;
+    background: none;
+}

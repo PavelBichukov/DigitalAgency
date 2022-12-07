@@ -1,0 +1,11 @@
+.section-card-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    &__card {
+        @include flex (column);
+        flex: 1 1 auto;
+        @include card-dots (0, 60%);
+    }
+}

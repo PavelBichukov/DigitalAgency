@@ -1,0 +1,26 @@
+@mixin card-dots ($left, $top) {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: url(/src/assets/icons/card-dots.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        left: $left;
+        top: $top;
+
+        @media (min-width:992px) {
+            display: none;
+        }
+    }
+}
+
+@mixin flex ($f-direction, $justify-c: flex-start, $align-i: stretch) {
+    display: flex;
+    flex-direction: $f-direction ;
+    justify-content: $justify-c;
+    align-items: $align-i;
+}
