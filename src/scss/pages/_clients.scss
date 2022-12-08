@@ -2,7 +2,11 @@
     background-color: $blue-bg-color;
     padding-bottom: 100px;
 
-
+    &__container{
+        @media (min-width:992px){
+        padding-left: 30px;
+        }
+    }
 
     &__header {
         @media (min-width:1200px) {
