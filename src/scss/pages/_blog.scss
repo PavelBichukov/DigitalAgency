@@ -16,13 +16,16 @@
 
     &__card {
         margin-bottom: 2rem;
-        align-items: center;
+        align-items: flex-start;
         display: none;
 
         &--active {
             @include flex (column, flex-start, center);
             text-align: center;
             gap: 20px;
+            @media (min-width:992px){
+                align-items: flex-start;
+            }
         }
 
         @media (min-width:992px) {

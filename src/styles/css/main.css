@@ -1396,7 +1396,7 @@ h5 {
 }
 .blog__card {
   margin-bottom: 2rem;
-  align-items: center;
+  align-items: flex-start;
   display: none;
 }
 .blog__card--active {
@@ -1406,6 +1406,11 @@ h5 {
   align-items: center;
   text-align: center;
   gap: 20px;
+}
+@media (min-width: 992px) {
+  .blog__card--active {
+    align-items: flex-start;
+  }
 }
 @media (min-width: 992px) {
   .blog__card {
