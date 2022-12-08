@@ -385,6 +385,10 @@ template {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Inter", sans-serif;
   color: rgb(255, 255, 255);
@@ -759,6 +763,14 @@ h5 {
   height: 40%;
   left: 50%;
   bottom: -20%;
+  transition: 0.2s;
+  border: none;
+}
+.digital__btn:hover {
+  transform: scale(1.05);
+}
+.digital__btn:active {
+  transform: scale(0.9);
 }
 .digital__big-photo {
   width: 100%;
