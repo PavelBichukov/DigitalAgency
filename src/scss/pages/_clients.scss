@@ -20,6 +20,22 @@
         }
     }
 
+    &__card-container{
+        position: relative;
+    }
+
+    &__card-button{
+        display: none;
+        @media (min-width:992px){
+            padding: 15px;
+            display: block;
+            position: absolute;
+            left: -25px;
+            top: 45%;
+            z-index: 1;
+        }
+    }
+
     &__card {
         background-color: $grey-bg-color;
         padding: 150px 30px 30px;
@@ -33,17 +49,6 @@
         @media (min-width:992px) {
             display: block;
             padding: 8rem 3rem 3rem;
-            position: relative;
-
-            &:first-child {
-                &::before {
-                    position: absolute;
-                    content: url(/src/assets/images/clients/decktop-arrow.svg);
-                    left: -5.5%;
-                    top: 45%;
-                    cursor: pointer;
-                }
-            }
         }
     }
 

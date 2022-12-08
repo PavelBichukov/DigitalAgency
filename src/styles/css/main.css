@@ -1280,6 +1280,22 @@ h5 {
     padding: 3rem 0;
   }
 }
+.clients__card-container {
+  position: relative;
+}
+.clients__card-button {
+  display: none;
+}
+@media (min-width: 992px) {
+  .clients__card-button {
+    padding: 15px;
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 45%;
+    z-index: 1;
+  }
+}
 .clients__card {
   background-color: rgb(53, 63, 91);
   padding: 150px 30px 30px;
@@ -1293,14 +1309,6 @@ h5 {
   .clients__card {
     display: block;
     padding: 8rem 3rem 3rem;
-    position: relative;
-  }
-  .clients__card:first-child::before {
-    position: absolute;
-    content: url(/src/assets/images/clients/decktop-arrow.svg);
-    left: -5.5%;
-    top: 45%;
-    cursor: pointer;
   }
 }
 .clients__card-text {
