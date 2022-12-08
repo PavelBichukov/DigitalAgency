@@ -563,6 +563,7 @@ h5 {
 @media (min-width: 1100px) {
   .main-header__logo {
     transform: scale(1.5);
+    padding: 2rem 0rem 2rem 0.8rem;
   }
 }
 .main-header__nav {
